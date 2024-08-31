@@ -11,6 +11,10 @@ class HomeController extends Controller
 {
     public function index()
     {
+        if (!Auth::check()) {
+            return redirect(route('login'))->with("error", "Anda harus login terlebih dahulu.");
+        }
+        
         $userId =  Auth::id();
 
         // Menghitung total tantangan hari ini yang berstatus pending

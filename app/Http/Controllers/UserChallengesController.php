@@ -13,6 +13,10 @@ class UserChallengesController extends Controller
 {
     public function index()
     {
+        if (!Auth::check()) {
+            return redirect(route('login'))->with("error", "Anda harus login terlebih dahulu.");
+        }
+
         $userId =  Auth::id(); // Mendapatkan ID pengguna yang sedang login
         $today = Carbon::today(); // Mendapatkan tanggal hari ini
         
@@ -56,6 +60,10 @@ class UserChallengesController extends Controller
 
     public function complete(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect(route('login'))->with("error", "Anda harus login terlebih dahulu.");
+        }
+
         // Mendapatkan user yang sedang login
         $userId =  Auth::id();
 
