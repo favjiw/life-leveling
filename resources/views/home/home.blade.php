@@ -8,50 +8,17 @@
   <div class="dashboard-container">
     <div class="card">
       <h3>Today's Overview</h3>
-      <p>See your progress and achievements for today.</p>
+      <p>Total tantangan yang belum selesai : {{ $todayPendingCount }}</p>
     </div>
     <div class="card">
-      <h3>Upcoming Challenges</h3>
-      <p>Prepare for new challenges coming your way.</p>
+      <h3>Completed Challenges This Week</h3>
+      <p>Total tantangan yang diselesaikan minggu ini : {{ $challengesCompletedThisWeek }}</p>
     </div>
     <div class="card">
       <h3>Your Stats</h3>
-      <p>Track your performance and level up!</p>
+      <p>Total XP: {{ $totalXp }}</p>
     </div>
   </div>
 
-  <div class="chart-container">
-    <div class="stats-overview">
-      <h3>Progress Summary</h3>
-      <ul>
-        <li>
-          <span class="stat-item">Steps Today: 0</span>
-        </li>
-        <li>
-          <span class="stat-item">Calories Burned: 0</span>
-        </li>
-        <li>
-          <span class="stat-item">Active Minutes: 0</span>
-        </li>
-        <li>
-          <span class="stat-item">Completed Quests: 0</span>
-        </li>
-      </ul>
-    </div>
-    
-    <div class="achievement-overview">
-      <h3>Recent Achievements</h3>
-      <ul>
-        <li>
-          <span class="achievement-item">First Steps - 0 Points</span>
-        </li>
-        <li>
-          <span class="achievement-item">Daily Streak - 0 Points</span>
-        </li>
-        <li>
-          <span class="achievement-item">Challenge Champion - 0 Points</span>
-        </li>
-      </ul>
-    </div>
-  </div>
+  
 @endsection
