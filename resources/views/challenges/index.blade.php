@@ -3,6 +3,8 @@
 @section('title', 'Challenges')
 
 @section('content')
+
+<link href="{{ asset('quest.css') }}" rel="stylesheet">
   <div class="text">Quests & Challenges</div>
   
   <div class="dashboard-container">
@@ -10,10 +12,7 @@
       <h3>Daily Quest</h3>
     </div>
     <div class="card">
-      <h3>Weekly Challenges</h3>
-    </div>
-    <div class="card">
-      <h3>Achievements</h3>
+      <h3>Leaderboards</h3>
     </div>
   </div>
 

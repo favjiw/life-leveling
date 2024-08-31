@@ -23,10 +23,10 @@
 
     <div class="menu-bar">
       <div class="menu">
-        <li class="search-box">
+        <!-- <li class="search-box">
           <i class='bx bx-search icon'></i>
           <input type="text" placeholder="Search...">
-        </li>
+        </li> -->
         <ul class="menu-links">
           <li class="nav-link">
             <a href="{{ url('/home') }}">
@@ -40,12 +40,12 @@
               <span class="text nav-text">Challenges & Quest</span>
             </a>
           </li>
-          <li class="nav-link">
+          <!-- <li class="nav-link">
             <a href="#">
               <i class='bx bx-cog icon'></i>
               <span class="text nav-text">Settings</span>
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
 
@@ -57,16 +57,16 @@
           </a>
         </li>
 
-        <li class="mode">
+        <!-- <li class="mode">
           <div class='moon-sun'>
             <i class='bx bx-moon icon moon'></i>
             <i class='bx bx-sun icon sun'></i>
           </div>
-          <span class="mode-text text">Dark Mode</span>
+          <span class="mode-text text">Dark Mode</span> -->
 
-          <div class="toggle-switch">
+          <!-- <div class="toggle-switch">
             <span class="switch"></span>
-          </div>
+          </div> -->
         </li>
       </div>
     </div>
