@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $userId = 2;
+        $userId =  Auth::id();
 
         // Menghitung total tantangan hari ini yang berstatus pending
         $todayPendingCount = UserChallenge::where('user_id', $userId)

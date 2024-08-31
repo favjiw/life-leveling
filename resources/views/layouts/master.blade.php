@@ -51,7 +51,7 @@
 
       <div class="bottom-content">
         <li>
-          <a href="#">
+          <a href="{{ url('/logout') }}">
             <i class='bx bx-log-out icon'></i>
             <span class="text nav-text">Log Out</span>
           </a>

@@ -13,7 +13,7 @@ class UserChallengesController extends Controller
 {
     public function index()
     {
-        $userId = 2; // Mendapatkan ID pengguna yang sedang login
+        $userId =  Auth::id(); // Mendapatkan ID pengguna yang sedang login
         $today = Carbon::today(); // Mendapatkan tanggal hari ini
         
         // Mengambil tantangan pengguna untuk hari ini
@@ -57,7 +57,7 @@ class UserChallengesController extends Controller
     public function complete(Request $request)
     {
         // Mendapatkan user yang sedang login
-        $userId = 2;
+        $userId =  Auth::id();
 
         // Mencari tantangan berdasarkan user_id dan status "pending"
         $userChallenge = UserChallenge::where('user_id', $userId)

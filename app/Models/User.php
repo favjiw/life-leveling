@@ -17,12 +17,13 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'username',
         'name',
         'email',
         'password',
-        'xp',
-        'created_at',
-        'updated_at'
+        'xp', // Add xp to the fillable array
+        'created_at', // Add created_at to the fillable array
+        'edited_at', // Add edited_at to the fillable array
     ];
 
     /**
@@ -44,6 +45,13 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'created_at' => 'datetime', // Cast created_at as datetime
+            'edited_at' => 'datetime', // Cast edited_at as datetime
         ];
+    }
+
+    public function setEditedAtAttribute($value)
+    {
+        $this->attributes['edited_at'] = $value ?? now();
     }
 }
