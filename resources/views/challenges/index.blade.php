@@ -8,12 +8,6 @@
   <div class="text">Quests & Challenges</div>
   
   <div class="dashboard-container">
-    <div class="card">
-      <h3>Daily Quest</h3>
-    </div>
-    <div class="card">
-      <h3>Leaderboards</h3>
-    </div>
   </div>
 
   <div class="chart-container">

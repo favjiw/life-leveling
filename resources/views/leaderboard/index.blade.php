@@ -4,11 +4,12 @@
 
 @section('content')
 <link href="{{ asset('leaderboard.css') }}" rel="stylesheet">
-  <div class="text">Leaderboard</div>
-  
-  <div class="chart-container">
+<div class="text">Leaderboard</div>
+<div class="dashboard-container">
+</div>
+<div class="chart-container">
     <div class="todo-list">
-        <h3>Leaderboard</h3>
+        <h3>Global Leaderboard</h3>
         <table class="table">
             <thead>
             <tr>
