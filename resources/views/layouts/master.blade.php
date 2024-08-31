@@ -40,12 +40,12 @@
               <span class="text nav-text">Challenges & Quest</span>
             </a>
           </li>
-          <!-- <li class="nav-link">
-            <a href="#">
-              <i class='bx bx-cog icon'></i>
-              <span class="text nav-text">Settings</span>
+          <li class="nav-link">
+            <a href="{{ url('/leaderboard') }}">
+              <i class='bx bx-table icon'></i>
+              <span class="text nav-text">Leaderboard</span>
             </a>
-          </li> -->
+          </li>
         </ul>
       </div>
 
