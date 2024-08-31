@@ -36,9 +36,11 @@
         <li class="nav-link">
           <span class="text home-text">N/A</span>
         </li> --}}
-        @foreach ($userChallenges as $item)
-            <li>{{ $item->title }} | {{ $item->points }}</li>
-        @endforeach
+        @forelse($userChallengesToday as $challenge)
+        <li>{{ $challenge->challenge->title }} - Status: {{ $challenge->status }}</li>
+        @empty
+            <p>Tidak ada tantangan untuk hari ini.</p>
+        @endforelse
       </ul>
     </div>
   </div>
