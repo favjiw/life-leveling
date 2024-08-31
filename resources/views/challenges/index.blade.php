@@ -20,28 +20,41 @@
   <div class="chart-container">
     <div class="todo-list">
       <h3>Daily Quest</h3>
-      <ul>
-        {{-- <li class="nav-link">
-          <span class="text home-text">N/A</span>
-        </li>
-        <li class="nav-link">
-          <span class="text home-text">N/A</span>
-        </li>
-        <li class="nav-link">
-          <span class="text home-text">N/A</span>
-        </li>
-        <li class="nav-link">
-          <span class="text home-text">N/A</span>
-        </li>
-        <li class="nav-link">
-          <span class="text home-text">N/A</span>
-        </li> --}}
-        @forelse($userChallengesToday as $challenge)
-        <li>{{ $challenge->challenge->title }} - Status: {{ $challenge->status }}</li>
-        @empty
-            <p>Tidak ada tantangan untuk hari ini.</p>
-        @endforelse
-      </ul>
+      <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Judul Tantangan</th>
+                <th>xp</th>
+                <th>Status</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @forelse($userChallengesToday as $index => $challenge)
+                <tr>
+                    <td>{{ $index + 1 }}</td>
+                    <td>{{ $challenge->challenge->title }}</td>
+                    <td>{{ $challenge->challenge->points }}</td>
+                    <td>{{ ucfirst($challenge->status) }}</td>
+                    <td>
+                        @if($challenge->status === 'pending')
+                            <form action="{{ url('/challenges/done') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <button type="submit" class="btn btn-success">Selesai</button>
+                            </form>
+                        @else
+                            <span>Tantangan Selesai</span>
+                        @endif
+                    </td>
+                </tr>
+            @empty
+                <tr>
+                    <td colspan="4">Tidak ada tantangan untuk hari ini.</td>
+                </tr>
+            @endforelse
+        </tbody>
+    </table>
     </div>
   </div>
 @endsection

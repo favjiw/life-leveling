@@ -6,6 +6,7 @@
 
   <!-- CSS -->
   <link href="{{ asset('style.css') }}" rel="stylesheet">
+  {{-- <link href="{{ asset('bootstrap-5.3.3-dist/css/bootstrap.css') }}" rel="stylesheet"> --}}
 
   <!-- Boxicons CSS -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -78,5 +79,6 @@
   </section>
 
   <script src="{{ asset('script.js') }}"></script>
+  {{-- <script src="{{ asset('bootstrap-5.3.3-dist/js/bootstrap.js') }}"></script> --}}
 </body>
 </html>
